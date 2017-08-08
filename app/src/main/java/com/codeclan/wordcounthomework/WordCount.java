@@ -5,4 +5,11 @@ package com.codeclan.wordcounthomework;
  */
 
 public class WordCount {
+
+
+
+
+    public int getCount(String string) {
+        return count;
+    }
 }
