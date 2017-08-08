@@ -3,6 +3,7 @@ package com.codeclan.wordcounthomework;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,7 +21,7 @@ public class EditText extends AppCompatActivity {
 
     }
 
-    public void onClick(){
-        Log.d("Text:", "The text in the box is" + textString.getText().toString());
+    public void onButtonClicked(View button){
+        Log.d("Text:", "The text in the box is " + textString.getText().toString());
     }
 }
