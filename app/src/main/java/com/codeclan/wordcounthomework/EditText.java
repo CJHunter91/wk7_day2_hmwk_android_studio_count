@@ -1,5 +1,6 @@
 package com.codeclan.wordcounthomework;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,6 +28,8 @@ public class EditText extends AppCompatActivity {
         Log.d("Text:", "The text in the box is " + userString );
         Log.d("Count:", "The word count is" + count );
 
-
+        Intent intent = new Intent(this, CountActivity.class);
+        intent.putExtra("count", count);
+        startActivity(intent);
     }
 }

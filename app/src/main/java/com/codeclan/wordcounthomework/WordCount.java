@@ -6,9 +6,6 @@ package com.codeclan.wordcounthomework;
 
 public class WordCount {
 
-
-
-
     public static int getCount(String string) {
         String[] stringArray = string.split(" ");
         return stringArray.length;
