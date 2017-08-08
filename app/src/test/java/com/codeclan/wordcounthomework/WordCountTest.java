@@ -17,7 +17,7 @@ public class WordCountTest {
     @Before
     public void before(){
         wordCount = new WordCount();
-        testString = "I am a Test I am a Test";
+        testString = "I am a Test, I am a Test";
     }
 
     @Test
