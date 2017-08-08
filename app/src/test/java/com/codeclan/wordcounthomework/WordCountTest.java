@@ -15,7 +15,7 @@ public class WordCountTest {
 
 
     String testString;
-    HashMap<String, String> testHash;
+    HashMap<String, Integer> testHash;
     String[] stringArray;
 
 
@@ -33,19 +33,19 @@ public class WordCountTest {
 
     }
 
-    @Test
-    public void canGetSumNumWords(){
-
-        testHash.put("Test", "2");
-        assertEquals(testHash, WordCount.sumOneWord(stringArray, "Test"));
-    }
+//    @Test
+//    public void canGetSumNumWords(){
+//
+//        testHash.put("Test", "2");
+//        assertEquals(testHash, WordCount.sumOneWord(stringArray, "Test"));
+//    }
 
     @Test
     public void canSumAllWords(){
-        testHash.put("I", "2");
-        testHash.put("am", "2");
-        testHash.put("a", "2");
-        testHash.put("Test", "2");
-        assertEquals(testHash, WordCount.sumAllWords(stringArray));
+        testHash.put("I", 2);
+        testHash.put("am", 2);
+        testHash.put("a", 2);
+        testHash.put("Test", 2);
+        assertEquals(testHash, WordCount.sumWords(stringArray));
     }
 }

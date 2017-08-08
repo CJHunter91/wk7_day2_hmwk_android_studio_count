@@ -17,16 +17,25 @@ public class WordCount {
 
     }
 
-    public static HashMap<String,String> sumOneWord(String[] array, String wordToCheck){
-        HashMap<String, String> hash = new HashMap<>();
-        int count = 0;
+//    public static HashMap<String,String> sumAllWords(String[] array){
+//        for(String word: array){
+//
+//        }
+//    }
+
+    public static HashMap<String,Integer> sumWords(String[] array){
+
+        HashMap<String, Integer> hash = new HashMap<>();
 
         for(String word: array){
-            if(word.equals(wordToCheck)){
-                count++;
+            if(hash.containsKey(word)){
+                hash.put(word, hash.get(word) + 1);
+            }
+            else {
+                hash.put(word, 1);
             }
         }
-        hash.put(wordToCheck, Integer.toString(count));
+
         return hash;
     }
 }
