@@ -29,13 +29,23 @@ public class WordCountTest {
     @Test
     public void canGetWordCount(){
 
-        assertEquals(8, WordCount.getCount(testString));
+        assertEquals(stringArray.length, WordCount.getCount(testString));
 
     }
 
     @Test
     public void canGetSumNumWords(){
+
         testHash.put("Test", "2");
-        assertEquals(testHash, WordCount.sumWords(stringArray, "Test"));
+        assertEquals(testHash, WordCount.sumOneWord(stringArray, "Test"));
+    }
+
+    @Test
+    public void canSumAllWords(){
+        testHash.put("I", "2");
+        testHash.put("am", "2");
+        testHash.put("a", "2");
+        testHash.put("Test", "2");
+        assertEquals(testHash, WordCount.sumAllWords(stringArray));
     }
 }

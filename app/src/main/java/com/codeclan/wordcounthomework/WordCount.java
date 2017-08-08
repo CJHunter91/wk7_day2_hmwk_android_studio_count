@@ -17,7 +17,7 @@ public class WordCount {
 
     }
 
-    public static HashMap<String,String> sumWords(String[] array, String wordToCheck){
+    public static HashMap<String,String> sumOneWord(String[] array, String wordToCheck){
         HashMap<String, String> hash = new HashMap<>();
         int count = 0;
 
