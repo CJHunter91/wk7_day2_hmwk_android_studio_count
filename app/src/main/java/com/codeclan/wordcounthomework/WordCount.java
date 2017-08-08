@@ -9,7 +9,7 @@ public class WordCount {
 
 
 
-    public int getCount(String string) {
+    public static int getCount(String string) {
         String[] stringArray = string.split(" ");
         return stringArray.length;
 

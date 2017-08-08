@@ -22,6 +22,11 @@ public class EditText extends AppCompatActivity {
     }
 
     public void onButtonClicked(View button){
-        Log.d("Text:", "The text in the box is " + textString.getText().toString());
+        String userString = textString.getText().toString();
+        String count = Integer.toString(WordCount.getCount(userString));
+        Log.d("Text:", "The text in the box is " + userString );
+        Log.d("Count:", "The word count is" + count );
+
+
     }
 }
