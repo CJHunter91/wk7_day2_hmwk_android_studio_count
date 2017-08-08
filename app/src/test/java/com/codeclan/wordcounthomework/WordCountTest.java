@@ -16,11 +16,13 @@ public class WordCountTest {
 
     String testString;
     HashMap<String, String> testHash;
+    String[] stringArray;
 
 
     @Before
     public void before(){
-        testString = "I am a Test, I am a Test";
+        testString = "I am a Test I am a Test";
+        stringArray = testString.split(" ");
         testHash = new HashMap<>();
     }
 
@@ -34,6 +36,6 @@ public class WordCountTest {
     @Test
     public void canGetSumNumWords(){
         testHash.put("Test", "2");
-        assertEquals(testHash, WordCount.sumWords(testString));
+        assertEquals(testHash, WordCount.sumWords(stringArray, "Test"));
     }
 }

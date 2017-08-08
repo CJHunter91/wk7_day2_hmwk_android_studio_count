@@ -11,13 +11,22 @@ public class WordCount {
 
 
     public static int getCount(String string) {
+        string.replaceAll(",", "");
         String[] stringArray = string.split(" ");
         return stringArray.length;
 
     }
 
-    public static HashMap<String,String> sumWords(String[] array, String word){
+    public static HashMap<String,String> sumWords(String[] array, String wordToCheck){
         HashMap<String, String> hash = new HashMap<>();
-        
+        int count = 0;
+
+        for(String word: array){
+            if(word.equals(wordToCheck)){
+                count++;
+            }
+        }
+        hash.put(wordToCheck, Integer.toString(count));
+        return hash;
     }
 }
